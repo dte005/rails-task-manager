@@ -1,0 +1,14 @@
+<h1>Detalhes da tarefa</h1>
+
+<h2><%= @task.title %></h2>
+<p>Details: <%= @task.details %></p>
+
+<% if  @task.completed %>
+  <p>Status:<input type="checkbox" checked disabled></p>
+<% else %>
+  <p>Status:<input type="checkbox" disabled></p>
+<% end %>
+
+<%= link_to 'Return', root_path %>
+<%= link_to 'Delete', task_path, method: :delete %>
+<%= link_to 'Update', edit_task_path %>
